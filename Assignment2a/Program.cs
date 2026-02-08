@@ -5,7 +5,7 @@ using System.IO;
 // TODO: Fill in your name and student number. (DONE)
 // Assignment 2a
 // NAME: Haoxi Dong
-// STUDENT NUMBER: 2325946062
+// STUDENT NUMBER: 2343873
 
 namespace Assignment2a
 {
