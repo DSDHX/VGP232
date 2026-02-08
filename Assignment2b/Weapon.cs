@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment2a
+namespace Assignment2b
 {
     public class Weapon
     {
@@ -12,6 +12,8 @@ namespace Assignment2a
         {
             Sword, Polearm, Claymore, Catalyst, Bow, None
         }
+
+        public Weapon() {}
 
         // Name,Type,Rarity,BaseAttack
         public string Name { get; set; }
@@ -87,40 +89,43 @@ namespace Assignment2a
                 return false;
             }
 
-            string name = values[0].Trim();
-
-            if (!Enum.TryParse(values[1].Trim(), true, out WeaponType type))
+            try
             {
-                type = WeaponType.None;
+                string name = values[0].Trim();
+                if (!Enum.TryParse(values[1].Trim(), true, out WeaponType type))
+                {
+                    type = WeaponType.None;
+                }
+
+                string image = values[2].Trim();
+                if (!int.TryParse(values[3].Trim(), out int rarity))
+                {
+                    return false;
+                }
+                if (!int.TryParse(values[4].Trim(), out int attack))
+                {
+                    return false;
+                }
+                string secondaryStat = values[5].Trim();
+                string passive = values[6].Trim();
+
+                weapon = new Weapon()
+                {
+                    Name = name,
+                    Type = type,
+                    Image = image,
+                    Rarity = rarity,
+                    BaseAttack = attack,
+                    SecondaryStat = secondaryStat,
+                    Passive = passive
+                };
+
+                return true;
             }
-
-            string image = values[2].Trim();
-
-            if (!int.TryParse(values[3].Trim(), out int rarity))
+            catch
             {
                 return false;
             }
-
-            if (!int.TryParse(values[4].Trim(), out int attack))
-            {
-                return false;
-            }
-
-            string secondaryStat = values[5].Trim();
-            string passive = values[6].Trim();
-
-            weapon = new Weapon()
-            {
-                Name = name,
-                Type = type,
-                Image = image,
-                Rarity = rarity,
-                BaseAttack = attack,
-                SecondaryStat = secondaryStat,
-                Passive = passive
-            };
-
-            return true;
         }
     }
 }

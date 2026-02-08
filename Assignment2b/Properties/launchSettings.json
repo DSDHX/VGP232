@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Assignment2b": {
+      "commandName": "Project",
+      "commandLineArgs": "-i data.csv -o output.csv -c -s BaseAttack"
+    }
+  }
+}
