@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WeaponLib\WeaponLib.csproj" />
+    <ProjectReference Include="..\TextureAtlasLib\TextureAtlasLib.csproj" />
   </ItemGroup>
 
 </Project>

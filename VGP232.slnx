@@ -3,5 +3,7 @@
   <Project Path="Assignment2a/Assignment2a.csproj" />
   <Project Path="Assignment2b/Assignment2b.csproj" Id="cb2a730f-07a7-4544-8d9a-37bcfb6f51a6" />
   <Project Path="Assignment2c/Assignment2c.csproj" Id="7e26f26c-9c34-4f38-b16a-77483da94047" />
+  <Project Path="Assignment3/Assignment3.csproj" Id="a4f25fde-8414-47ca-ab3f-5d71655c00d1" />
+  <Project Path="TextureAtlasLib/TextureAtlasLib.csproj" />
   <Project Path="WeaponLib/WeaponLib.csproj" Id="ba9e9052-c1ff-495c-972b-01ad485e75b9" />
 </Solution>
